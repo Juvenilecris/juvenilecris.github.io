@@ -11,10 +11,9 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* B.S. in  Artificial Intelligence, Dalian University of Technology, 2026 (expected)
 
+<!--
 Work experience
 ======
 * Spring 2024: Academic Pages Collaborator
@@ -31,15 +30,26 @@ Work experience
   * Github University
   * Duties included: Tagging issues
   * Supervisor: Professor Git
-  
-Skills
+-->
+
+Honors & Awards
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+*• 2023 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
+
+*• 2024 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
+
+*• 2024 Dalian University of Technology Corporate Scholarship*
+
+*• The Blue Bridge Cup, Mathematical Modelling and Embedded Competition... 6 provincial awards*
+
+Technical Skills
+======
+• **Languages**: Python (PyTorch), C++, C
+
+• **ML Frameworks**: Pytorch, Transformers, TensorFlow  
+
+• **Tools**: Git, Docker, LaTeX, origin
+
 
 Publications
 ======
@@ -59,6 +69,6 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+<!--Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->
