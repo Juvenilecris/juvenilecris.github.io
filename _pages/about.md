@@ -5,6 +5,7 @@ author_profile: true
 redirect_from: 
   - /about/
 ---
+
 Biography
 ======
 Ningning Wang (王宁宁) is an undergraduate researcher specializing in Artificial Intelligence at [Dalian University of Technology (DUT)](https://dlut.edu.cn/).
@@ -53,7 +54,6 @@ Honors & Awards
 ======
 • 2023 National Scholarship (Top 1%)  
 • 2022 Outstanding Freshman Scholarship  
-• 1st Prize in National AI Innovation Competition
 -->
 
 Publications
@@ -70,6 +70,6 @@ Publications
 
 For more info
 ======
-[CV](/cv/) | [GitHub](https://github.com/juvenilecris) | [Openreview](https://openreview.net/profile?id=~Ningning_Wang3)
+[CV](/cv/) | [GitHub](https://github.com/juvenilecris) |[🤗huggingface](https://huggingface.co/Juvenilecris) |[Openreview](https://openreview.net/profile?id=~Ningning_Wang3)
 
-Contact: nnwang@mail.dlut.edu.cn
+Contact: [email](nnwang@mail.dlut.edu.cn)
