@@ -59,7 +59,7 @@ Honors & Awards
 
 Publications
 ======
-**waiting...
+**waiting...**
 <!-- 
 **Kongzi: A Historical Large Language Model with Fact Enhancement**  
 *Ningning Wang*, [Co-first Author], [Other Authors]  
