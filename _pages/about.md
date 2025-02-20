@@ -18,7 +18,7 @@ B.Eng. in Artificial Intelligence  Dalian University of Technology
 
 `Core Coursework`: Deep Learning(98), Operating System(97),Computer Organization(96),Digital Signal Processing(93)
 
-`waiting`
+### waiting
 
 Research Interests
 ======
