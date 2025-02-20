@@ -19,17 +19,17 @@ B.Eng. in Artificial Intelligence  Dalian University of Technology
 
 `Core Coursework`: Deep Learning(98), Operating System(97),Computer Organization(96),Digital Signal Processing(93)
 
-Research Interests
-======
-• **Large Language Models**  
-
-• **Computer Vision**  
-
 News
 ======
 • [2025.02] Paper submitted to ACL 2025 (co-1st author) 🎉
 
 • [waiting]
+
+Research Interests
+======
+• **Large Language Models**  
+
+• **Computer Vision**  
 
 <!-- 
 Research Experience
@@ -43,18 +43,20 @@ Research Experience
 `2023.09 - 2024.02` Undergraduate Researcher  
 • Designed cross-modal alignment module for image-text retrieval  
 • Improved Top-1 accuracy by 8.7% on COCO dataset
+-->
 
 Technical Skills
 ======
-• **Languages**: Python (PyTorch), C++, Java  
-• **ML Frameworks**: HuggingFace, LangChain, TensorFlow  
-• **Tools**: Git, LaTeX, Docker, AWS
+• **Languages**: Python (PyTorch), C++, C
+• **ML Frameworks**: Pytorch, Transformers, TensorFlow  
+• **Tools**: Git, Docker, LaTeX
 
 Honors & Awards
 ======
-• 2023 National Scholarship (Top 1%)  
-• 2022 Outstanding Freshman Scholarship  
--->
+• 2023 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)  
+• 2024 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)
+• 2024 Dalian University of Technology Corporate Scholarship
+
 
 Publications
 ======
