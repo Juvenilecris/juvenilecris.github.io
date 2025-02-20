@@ -10,7 +10,8 @@ Biography
 Ningning Wang (王宁宁) is an undergraduate researcher specializing in Artificial Intelligence at [Dalian University of Technology (DUT)](https://dlut.edu.cn/).
 
 ## Education  
-• ### 2022.09 - Present
+• **2022.09 - Present**
+
 B.Eng. in Artificial Intelligence  Dalian University of Technology 
 
 `GPA`: 4.0/5.0 `Rank`: 4/89  
