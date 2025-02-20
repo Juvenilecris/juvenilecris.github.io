@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Ningning Wang | AI Researcher"
+title: "Ningning Wang's Homepage"
 author_profile: true
 redirect_from: 
   - /about/
