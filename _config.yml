@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Ningning Wang/Undergrad student"
+title                    : "Ningning Wang/Undergrad Student"
 title_separator          : "-"
 name                     : &name "Ningning Wang"
 description              : &description "personal description"
@@ -74,6 +74,7 @@ author:
   xing             : # Username
   youtube          : # Username
   zhihu            : # Username
+  QQ               : "2659468809"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
