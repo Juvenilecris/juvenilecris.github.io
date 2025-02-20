@@ -1,19 +1,19 @@
 ---
 permalink: /
 title: "Ningning Wang | AI Researcher"
-author_profile: false
+author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
 Biography
 ======
 Ningning Wang (王宁宁) is an undergraduate researcher specializing in Artificial Intelligence at [School of Future Technology](https://futureschool.dlut.edu.cn/), Dalian University of Technology (DUT). 
 
 **Education**  
-`2022.09 - Present` B.Eng. in Artificial Intelligence  Dalian University of Technology (GPA: 4.0/5.0, Rank: 4/89)  
-``Core Coursework``: Deep Learning(98), Operating System(97),Computer Organization(96),Digital Signal Processing(93)
+`2022.09 - Present` B.Eng. in Artificial Intelligence  Dalian University of Technology 
+*GPA*: 4.0/5.0 *Rank*: 4/89  
+*Core Coursework*: Deep Learning(98), Operating System(97),Computer Organization(96),Digital Signal Processing(93)
 `waiting`
 
 Research Interests
