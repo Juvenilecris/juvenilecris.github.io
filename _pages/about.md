@@ -31,8 +31,7 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 ## 📣 News
 
 - **[2025-02]** 🚀 Submitted paper to ACL 2025 (co-1st author)
-- **[2024-12]** 📚 Preparing manuscript on multimodal reasoning
-- **[2024-09]** 🏆 Awarded University Scholarship for Academic Excellence
+- **[waiting]**
 
 ---
 
