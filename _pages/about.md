@@ -63,13 +63,14 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 ## 📚 Publications
 
 **waiting🤔🤔🤔**
+---
 <!--
 **Under Review**  
 - **Kongzi**: A Historical LLM with Fact Enhancement  
 *Ningning Wang*, et al. | ACL 2025  
 [![arXiv](https://img.shields.io/badge/arXiv-2305.12345-b31b1b.svg)](https://arxiv.org/abs/1234.5678)
 -->
----
+
 
 
 ## 📬 Contact
