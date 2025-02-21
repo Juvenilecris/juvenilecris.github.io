@@ -18,7 +18,7 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 
 **Dalian University of Technology**  
 *2022.09 - Present* | B.Eng. in Artificial Intelligence  
-- **GPA**: 4.0/5.0 (Top 5%)  **Rank**: 4/89 |
+- **GPA**: 4.0/5.0 (Top 5%)  **Rank**: 4/89
 
 | Core Courses | Grade |
 |------|-------|
