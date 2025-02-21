@@ -6,8 +6,7 @@ redirect_from:
   - /about/
 ---
 
-Biography
-======
+# Biography
 I am an undergraduate researcher specializing in Artificial Intelligence at [Dalian University of Technology (DUT)](https://dlut.edu.cn/).
 
 ## Education  
@@ -19,14 +18,12 @@ B.Eng. in Artificial Intelligence, Dalian University of Technology
 
 **Core Coursework**: Deep Learning(98), Operating System(97),Computer Organization(96),Digital Signal Processing(93)
 
-News
-======
+# News
 • [2025.02] Paper submitted to ACL 2025 (co-1st author) 🎉
 
 • [waiting] 🤔
 
-Research Interests
-======
+# Research Interests
 • **Large Language Models**  
 
 • **Computer Vision**  
@@ -45,8 +42,7 @@ Research Experience
 • Improved Top-1 accuracy by 8.7% on COCO dataset
 -->
 
-Honors & Awards
-======
+# Honors & Awards
 *• 2023 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
 
 *• 2024 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
@@ -55,16 +51,14 @@ Honors & Awards
 
 *• The Blue Bridge Cup, Mathematical Modelling and Embedded Competition... 6 provincial awards*
 
-Technical Skills
-======
+# Technical Skills
 • **Languages**: Python (PyTorch), C++, C
 
 • **ML Frameworks**: Pytorch, Transformers, TensorFlow  
 
 • **Tools**: Git, Docker, LaTeX, origin
 
-Publications
-======
+# Publications
 **waiting 🤔...**
 
 <!-- 
