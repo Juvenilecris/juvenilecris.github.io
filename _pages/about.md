@@ -26,6 +26,7 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
   | Operating System | 97 |
   | Computer Organization | 96 |
   | Digital Signal Processing | 93 |
+  
 ---
 
 ## 📣 News
@@ -64,12 +65,12 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 
 - **waiting🤔🤔🤔**
 ---
-<!--
-**Under Review**  
-- **Kongzi**: A Historical LLM with Fact Enhancement  
-*Ningning Wang*, et al. | ACL 2025  
-[![arXiv](https://img.shields.io/badge/arXiv-2305.12345-b31b1b.svg)](https://arxiv.org/abs/1234.5678)
--->
+    
+    **Under Review**  
+    - **Kongzi**: A Historical LLM with Fact Enhancement  
+    *Ningning Wang*, et al. | ACL 2025  
+    [![arXiv](https://img.shields.io/badge/arXiv-2305.12345-b31b1b.svg)](https://arxiv.org/abs/1234.5678)
+
 ## 💪 ProjeCt
 
 - **waiting🤔🤔🤔**
