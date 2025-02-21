@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Ningning Wang's Homepage"
+title: "Ningning Wang(王宁宁)'s Homepage"
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,12 +8,12 @@ redirect_from:
 
 Biography
 ======
-Ningning Wang (王宁宁) is an undergraduate researcher specializing in Artificial Intelligence at [Dalian University of Technology (DUT)](https://dlut.edu.cn/).
+I am an undergraduate researcher specializing in Artificial Intelligence at [Dalian University of Technology (DUT)](https://dlut.edu.cn/).
 
 ## Education  
 ### • 2022.09 - Present
 
-B.Eng. in Artificial Intelligence  Dalian University of Technology 
+B.Eng. in Artificial Intelligence, Dalian University of Technology
 
 **GPA**: 4.0/5.0 **Rank**: 4/89  
 
@@ -23,7 +23,7 @@ News
 ======
 • [2025.02] Paper submitted to ACL 2025 (co-1st author) 🎉
 
-• [waiting]
+• [waiting] 🤔
 
 Research Interests
 ======
@@ -65,7 +65,8 @@ Technical Skills
 
 Publications
 ======
-**waiting...**
+**waiting 🤔...**
+
 <!-- 
 **Kongzi: A Historical Large Language Model with Fact Enhancement**  
 *Ningning Wang*, [Co-first Author], [Other Authors]  
@@ -79,4 +80,4 @@ For more info
 ======
 [CV](/cv/) | [GitHub](https://github.com/juvenilecris) |[🤗huggingface](https://huggingface.co/Juvenilecris) |[Openreview](https://openreview.net/profile?id=~Ningning_Wang3)
 
-Contact: `13635675031`💬 `2659468809`🐧
+Contact: `13635675031`🗨️ `2659468809`🐧
