@@ -20,21 +20,18 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 *2022.09 - Present* | B.Eng. in Artificial Intelligence  
 - **GPA**: 4.0/5.0 (Top 5%)  **Rank**: 4/89
 
+  | Core Courses | Grade |
+  |------|-------|
+  | Deep Learning | 98 |
+  | Operating System | 97 |
+  | Computer Organization | 96 |
+  | Digital Signal Processing | 93 |
 ---
-
-
-| Core Courses | Grade |
-|------|-------|
-| Deep Learning | 98 |
-| Operating System | 97 |
-| Computer Organization | 86 |
-| Digital Signal Processing | 93 |
-
 
 ## 📣 News
 
 - **[2025-02]** 🚀 Submitted paper to ACL 2025 (co-1st author)
-- **[waiting]**
+- **[waiting]** 🤔🤔🤔
 
 ---
 
@@ -65,7 +62,7 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 
 ## 📚 Publications
 
-**waiting🤔🤔🤔**
+- **waiting🤔🤔🤔**
 ---
 <!--
 **Under Review**  
@@ -73,12 +70,15 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 *Ningning Wang*, et al. | ACL 2025  
 [![arXiv](https://img.shields.io/badge/arXiv-2305.12345-b31b1b.svg)](https://arxiv.org/abs/1234.5678)
 -->
+## 💪 ProjeCt
 
+- **waiting🤔🤔🤔**
+---
 
 
 ## 📬 Contact
 
-[CV](/cv/) | [GitHub](https://github.com/juvenilecris) |[🤗huggingface](https://huggingface.co/Juvenilecris) |[Openreview](https://openreview.net/profile?id=~Ningning_Wang3)
+[CV](/cv/)|[GitHub](https://github.com/juvenilecris)|[🤗huggingface](https://huggingface.co/Juvenilecris)|[Openreview](https://openreview.net/profile?id=~Ningning_Wang3)
 
 ✉️ nnwang@mail.dlut.edu.cn  
 📱 `(+86) 136-3567-5031`
