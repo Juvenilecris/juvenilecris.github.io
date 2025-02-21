@@ -17,7 +17,7 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 ## 🎓 Education
 
 **Dalian University of Technology**  
-*2022.09 - Present* | B.Eng. in Artificial Intelligence  
+`2022.09 - Present` | `B.Eng. in Artificial Intelligence`  
 - **GPA**: 4.0/5.0 (Top 5%)  **Rank**: 4/89
 
   | Core Courses | Grade |
@@ -65,7 +65,6 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 
 - **waiting🤔🤔🤔**
 ---
-    
     **Under Review**  
     - **Kongzi**: A Historical LLM with Fact Enhancement  
     *Ningning Wang*, et al. | ACL 2025  
