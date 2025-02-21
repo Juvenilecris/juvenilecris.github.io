@@ -75,7 +75,6 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 
 ## 📬 Contact
 
-[CV](/cv/)|[GitHub](https://github.com/juvenilecris)|[🤗huggingface](https://huggingface.co/Juvenilecris)|[Openreview](https://openreview.net/profile?id=~Ningning_Wang3)
----
-✉️ nnwang@mail.dlut.edu.cn  
-📱 `(+86) 136-3567-5031`
+- [CV](/cv/)|[GitHub](https://github.com/juvenilecris)|[🤗huggingface](https://huggingface.co/Juvenilecris)|[Openreview](https://openreview.net/profile?id=~Ningning_Wang3)
+- ✉️ nnwang@mail.dlut.edu.cn  
+- 📱 `(+86) 136-3567-5031`
