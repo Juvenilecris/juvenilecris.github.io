@@ -20,13 +20,16 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 *2022.09 - Present* | B.Eng. in Artificial Intelligence  
 - **GPA**: 4.0/5.0 (Top 5%)  **Rank**: 4/89
 
+---
+
+
 | Core Courses | Grade |
 |------|-------|
 | Deep Learning | 98 |
 | Operating System | 97 |
 | Computer Organization | 86 |
 | Digital Signal Processing | 93 |
----
+
 
 ## 📣 News
 
