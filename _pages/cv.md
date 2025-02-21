@@ -9,10 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
+## Education
 * B.S. in  Artificial Intelligence, Dalian University of Technology, 2026 (expected)
 
+---
 <!--
 Work experience
 ======
@@ -32,8 +32,7 @@ Work experience
   * Supervisor: Professor Git
 -->
 
-Honors & Awards
-======
+## Honors & Awards
 *• 2023 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
 
 *• 2024 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
@@ -42,21 +41,26 @@ Honors & Awards
 
 *• The Blue Bridge Cup, Mathematical Modelling and Embedded Competition... 6 provincial awards*
 
-Technical Skills
-======
+---
+
+## Technical Skills
+
 • **Languages**: Python (PyTorch), C++, C
 
 • **ML Frameworks**: Pytorch, Transformers, TensorFlow  
 
 • **Tools**: Git, Docker, LaTeX, origin
 
+---
 
-Publications
-======
+## Publications
+
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
+---
+
 <!--
 Talks
 ======
