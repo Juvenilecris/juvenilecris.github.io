@@ -18,13 +18,14 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 
 **Dalian University of Technology**  
 *2022.09 - Present* | B.Eng. in Artificial Intelligence  
-- **GPA**: 4.0/5.0 (Top 5%) | **Rank**: 4/89
-- **Core Courses**: 
-  ▶ Deep Learning (98)  
-  ▶ Operating System (97)  
-  ▶ Computer Organization (96)  
-  ▶ Digital Signal Processing (93)
+- **GPA**: 4.0/5.0 (Top 5%)  **Rank**: 4/89 |
 
+| Core Courses | Grade |
+|------|-------|
+| Deep Learning | 98 |
+| Operating System | 97 |
+| Computer Organization | 86 |
+| Digital Signal Processing | 93 |
 ---
 
 ## 📣 News
@@ -37,11 +38,13 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 
 ## 🏅 Honors & Awards
 
-| Year | Award | Scope |
-|------|-------|-------|
-| 2024 | Dalian University Scholarship (First Class) | Top 5% |
-| 2023 | National Embedded Competition (First Prize) | Provincial |
-| 2022 | Mathematical Modeling Contest (Merit Award) | Provincial |
+*• 2023 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
+
+*• 2024 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
+
+*• 2024 Dalian University of Technology Corporate Scholarship*
+
+*• The Blue Bridge Cup, Mathematical Modelling and Embedded Competition... 6 provincial awards*
 
 ---
 
@@ -54,7 +57,7 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 `PyTorch` `TensorFlow` `HuggingFace Transformers`
 
 **Tools**  
-`Git` `Docker` `Linux` `AWS EC2`
+`Git` `Docker` `Linux`
 
 ---
 
@@ -71,8 +74,7 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 
 
 ## 📬 Contact
-For more info
-======
+
 [CV](/cv/) | [GitHub](https://github.com/juvenilecris) |[🤗huggingface](https://huggingface.co/Juvenilecris) |[Openreview](https://openreview.net/profile?id=~Ningning_Wang3)
 
 ✉️ wangnn@mail.dlut.edu.cn  
