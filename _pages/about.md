@@ -6,72 +6,73 @@ redirect_from:
   - /about/
 ---
 
-# Biography
-I am an undergraduate student specializing in Artificial Intelligence at [Dalian University of Technology (DUT)](https://dlut.edu.cn/).
+## 👋 Biography
 
-## Education  
-### • 2022.09 - Present
+<!--<img align="right" width="220" src="/images/avatar.jpg" style="border-radius: 10px;">-->
 
-B.Eng. in Artificial Intelligence, Dalian University of Technology
+I am an undergraduate student specializing in Artificial Intelligence at [Dalian University of Technology (DUT)](https://dlut.edu.cn/). My research interests lie in Large Language Models and their multimodal applications.
 
-**GPA**: 4.0/5.0 **Rank**: 4/89  
+---
 
-**Core Coursework**: Deep Learning(98), Operating System(97),Computer Organization(96),Digital Signal Processing(93)
+## 🎓 Education
 
-# News
-• [2025.02] Paper submitted to ACL 2025 (co-1st author) 🎉
+**Dalian University of Technology**  
+*2022.09 - Present* | B.Eng. in Artificial Intelligence  
+- **GPA**: 4.0/5.0 (Top 5%) | **Rank**: 4/89
+- **Core Courses**: 
+  ▶ Deep Learning (98)  
+  ▶ Operating System (97)  
+  ▶ Computer Organization (96)  
+  ▶ Digital Signal Processing (93)
 
-• [waiting] 🤔
+---
 
-# Research Interests
-• **Large Language Models**  
+## 📣 News
 
-• **Computer Vision**  
+- **[2025-02]** 🚀 Submitted paper to ACL 2025 (co-1st author)
+- **[2024-12]** 📚 Preparing manuscript on multimodal reasoning
+- **[2024-09]** 🏆 Awarded University Scholarship for Academic Excellence
 
-<!-- 
-Research Experience
-======
-**DUT Cognitive Computing Lab**  
-`2024.03 - Present` Research Assistant  
-• Developing retrieval-augmented generation systems for historical texts  
-• Implementing contrastive learning for temporal fact verification
+---
 
-**Multimodal Learning Project**  
-`2023.09 - 2024.02` Undergraduate Researcher  
-• Designed cross-modal alignment module for image-text retrieval  
-• Improved Top-1 accuracy by 8.7% on COCO dataset
+## 🏅 Honors & Awards
+
+| Year | Award | Scope |
+|------|-------|-------|
+| 2024 | Dalian University Scholarship (First Class) | Top 5% |
+| 2023 | National Embedded Competition (First Prize) | Provincial |
+| 2022 | Mathematical Modeling Contest (Merit Award) | Provincial |
+
+---
+
+## 🔧 Technical Skills
+
+**Programming**  
+`Python` `C++` `MATLAB` `LaTeX`
+
+**Frameworks**  
+`PyTorch` `TensorFlow` `HuggingFace Transformers`
+
+**Tools**  
+`Git` `Docker` `Linux` `AWS EC2`
+
+---
+
+## 📚 Publications
+
+<!--
+**Under Review**  
+- **Kongzi**: A Historical LLM with Fact Enhancement  
+*Ningning Wang*, et al. | ACL 2025  
+[![arXiv](https://img.shields.io/badge/arXiv-2305.12345-b31b1b.svg)](https://arxiv.org/abs/1234.5678)
 -->
-
-# Honors & Awards
-*• 2023 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
-
-*• 2024 Dalian University of Technology Scholarship for Academic Excellence (First Class)(Top 5%)*
-
-*• 2024 Dalian University of Technology Corporate Scholarship*
-
-*• The Blue Bridge Cup, Mathematical Modelling and Embedded Competition... 6 provincial awards*
-
-# Technical Skills
-• **Languages**: Python (PyTorch), C++, C
-
-• **ML Frameworks**: Pytorch, Transformers, TensorFlow  
-
-• **Tools**: Git, Docker, LaTeX, origin
-
-# Publications
-**waiting 🤔...**
-
-<!-- 
-**Kongzi: A Historical Large Language Model with Fact Enhancement**  
-*Ningning Wang*, [Co-first Author], [Other Authors]  
-*(Under Review)* ACL 2025  
-[Project Page]() | [arXiv]() | [GitHub]()  
-• Proposed novel factual enhancement framework for historical Q&A  
-• Achieved SOTA performance on Chinese history benchmarks -->
+---
 
 
+## 📬 Contact
 For more info
 ======
 [CV](/cv/) | [GitHub](https://github.com/juvenilecris) |[🤗huggingface](https://huggingface.co/Juvenilecris) |[Openreview](https://openreview.net/profile?id=~Ningning_Wang3)
 
-Contact: `13635675031`🗨️ `2659468809`🐧
+✉️ wangnn@mail.dlut.edu.cn  
+📱 `(+86) 136-3567-5031`
