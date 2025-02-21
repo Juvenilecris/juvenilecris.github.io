@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 # Biography
-I am an undergraduate researcher specializing in Artificial Intelligence at [Dalian University of Technology (DUT)](https://dlut.edu.cn/).
+I am an undergraduate student specializing in Artificial Intelligence at [Dalian University of Technology (DUT)](https://dlut.edu.cn/).
 
 ## Education  
 ### • 2022.09 - Present
