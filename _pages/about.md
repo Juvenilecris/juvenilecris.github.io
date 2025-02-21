@@ -67,7 +67,7 @@ I am an undergraduate student specializing in Artificial Intelligence at [Dalian
 ---
 
 
-## 💪 ProjeCt
+## 💪 Project
 
 - **waiting🤔🤔🤔**
 ---
