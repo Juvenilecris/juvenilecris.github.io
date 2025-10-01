@@ -1,573 +1,408 @@
-// Theme Management
-class ThemeManager {
-    constructor() {
-        this.themeToggle = document.getElementById('theme-toggle');
-        this.currentTheme = localStorage.getItem('theme') || 'light';
-        this.init();
-    }
-
-    init() {
-        this.setTheme(this.currentTheme);
-        this.themeToggle.addEventListener('click', () => this.toggleTheme());
-    }
-
-    setTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        this.currentTheme = theme;
-        localStorage.setItem('theme', theme);
-        
-        // Update toggle button icon
-        const icon = this.themeToggle.querySelector('i');
-        if (theme === 'dark') {
-            icon.className = 'fas fa-sun';
-        } else {
-            icon.className = 'fas fa-moon';
-        }
-    }
-
-    toggleTheme() {
-        const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
-        this.setTheme(newTheme);
-    }
-}
-
-// Navigation Management
-class NavigationManager {
-    constructor() {
-        this.navToggle = document.querySelector('.nav-toggle');
-        this.navMenu = document.querySelector('.nav-menu');
-        this.navLinks = document.querySelectorAll('.nav-link');
-        this.init();
-    }
-
-    init() {
-        this.navToggle.addEventListener('click', () => this.toggleNav());
-        
-        // Close mobile menu when clicking on a link
-        this.navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    this.navMenu.classList.remove('active');
-                }
-            });
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!this.navMenu.contains(e.target) && !this.navToggle.contains(e.target)) {
-                this.navMenu.classList.remove('active');
-            }
-        });
-    }
-
-    toggleNav() {
-        this.navMenu.classList.toggle('active');
-        
-        // Animate hamburger menu
-        const bars = this.navToggle.querySelectorAll('.bar');
-        bars.forEach((bar, index) => {
-            if (this.navMenu.classList.contains('active')) {
-                if (index === 0) bar.style.transform = 'rotate(-45deg) translate(-5px, 6px)';
-                if (index === 1) bar.style.opacity = '0';
-                if (index === 2) bar.style.transform = 'rotate(45deg) translate(-5px, -6px)';
-            } else {
-                bar.style.transform = 'none';
-                bar.style.opacity = '1';
-            }
-        });
-    }
-}
-
-// Smooth Scrolling
-class SmoothScrollManager {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        // Add smooth scrolling to all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', (e) => {
-                e.preventDefault();
-                const target = document.querySelector(anchor.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.offsetTop - 70; // Account for fixed navbar
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    }
-}
-
-// Scroll Animations
-class ScrollAnimationManager {
-    constructor() {
-        this.observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        this.init();
-    }
-
-    init() {
-        this.observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, this.observerOptions);
-
-        // Observe elements for animation
-        this.observeElements();
-    }
-
-    observeElements() {
-        const elementsToAnimate = document.querySelectorAll(`
-            .hero-content,
-            .about-content,
-            .research-item,
-            .publication-item,
-            .project-item,
-            .news-item,
-            .gallery-item,
-            .social-link
-        `);
-
-        console.log('Found elements to animate:', elementsToAnimate.length);
-        elementsToAnimate.forEach(el => {
-            el.classList.add('fade-in');
-            this.observer.observe(el);
-        });
-    }
-
-    // Method to re-observe elements after dynamic content is added
-    reobserveElements() {
-        // Clear existing observations
-        this.observer.disconnect();
-        
-        // Re-observe all elements
-        this.observeElements();
-    }
-}
-
-// Publication Manager
-class PublicationManager {
-    constructor() {
-        this.publications = [
-            {
-                title: "Advanced Vision-Language Models for Multimodal Understanding",
-                authors: "Ningning Wang, Co-author Name, Another Author",
-                venue: "Conference on Computer Vision and Pattern Recognition (CVPR)",
-                year: "2024",
-                abstract: "This paper presents novel approaches to vision-language model integration, focusing on improved multimodal understanding capabilities. Our method demonstrates significant improvements in cross-modal retrieval and visual question answering tasks.",
-                links: {
-                    arxiv: "#",
-                    code: "#",
-                    pdf: "#",
-                    bibtex: "#"
-                }
-            },
-            {
-                title: "Reinforcement Learning for Autonomous Decision Making",
-                authors: "Ningning Wang, Research Partner, Collaborator Name",
-                venue: "International Conference on Machine Learning (ICML)",
-                year: "2024",
-                abstract: "We propose a new reinforcement learning framework that enhances autonomous decision-making capabilities in complex environments. The approach shows promising results in robotic navigation and game playing scenarios.",
-                links: {
-                    arxiv: "#",
-                    code: "#",
-                    pdf: "#",
-                    bibtex: "#"
-                }
-            }
-        ];
-        this.init();
-    }
-
-    init() {
-        this.renderPublications();
-    }
-
-    renderPublications() {
-        const container = document.querySelector('.publications-grid');
-        if (!container) {
-            console.error('Publications container not found');
-            return;
-        }
-
-        console.log('Rendering publications:', this.publications.length);
-        console.log('Container found:', container);
-        container.innerHTML = this.publications.map(pub => `
-            <div class="publication-item fade-in">
-                <div class="publication-header">
-                    <h3>${pub.title}</h3>
-                    <div class="publication-venue">
-                        <span class="venue-name">${pub.venue}</span>
-                        <span class="venue-year">${pub.year}</span>
-                    </div>
-                </div>
-                <div class="publication-authors">
-                    ${pub.authors}
-                </div>
-                <div class="publication-abstract">
-                    <p>${pub.abstract}</p>
-                </div>
-                <div class="publication-links">
-                    ${pub.links.arxiv ? `<a href="${pub.links.arxiv}" class="pub-link">
-                        <img src="icon/Arxiv.svg" alt="ArXiv">
-                        <span>ArXiv</span>
-                    </a>` : ''}
-                    ${pub.links.code ? `<a href="${pub.links.code}" class="pub-link">
-                        <i class="fas fa-code"></i>
-                        <span>Code</span>
-                    </a>` : ''}
-                    ${pub.links.pdf ? `<a href="${pub.links.pdf}" class="pub-link">
-                        <i class="fas fa-file-pdf"></i>
-                        <span>PDF</span>
-                    </a>` : ''}
-                    ${pub.links.bibtex ? `<a href="${pub.links.bibtex}" class="pub-link">
-                        <i class="fas fa-quote-right"></i>
-                        <span>BibTeX</span>
-                    </a>` : ''}
-                </div>
-            </div>
-        `).join('');
-    }
-}
-
-// Project Manager
-class ProjectManager {
-    constructor() {
-        this.projects = [
-            {
-                title: "VLM-Based Image Captioning System",
-                description: "A comprehensive system that generates natural language descriptions for images using state-of-the-art vision-language models. Features real-time processing and multilingual support.",
-                image: "project1.jpg",
-                links: {
-                    demo: "#",
-                    code: "#"
-                }
-            },
-            {
-                title: "Reinforcement Learning Environment",
-                description: "An open-source reinforcement learning environment for testing and developing RL algorithms. Includes various scenarios from simple navigation to complex multi-agent systems.",
-                image: "project2.jpg",
-                links: {
-                    demo: "#",
-                    code: "#"
-                }
-            },
-            {
-                title: "Multimodal AI Assistant",
-                description: "An intelligent assistant that can understand and respond to both visual and textual inputs. Built using transformer architectures and fine-tuned for specific domains.",
-                image: "project3.jpg",
-                links: {
-                    demo: "#",
-                    code: "#"
-                }
-            }
-        ];
-        this.init();
-    }
-
-    init() {
-        this.renderProjects();
-    }
-
-    renderProjects() {
-        const container = document.querySelector('.projects-grid');
-        if (!container) {
-            console.error('Projects container not found');
-            return;
-        }
-
-        console.log('Rendering projects:', this.projects.length);
-        container.innerHTML = this.projects.map(project => `
-            <div class="project-item fade-in">
-                <div class="project-image">
-                    <div class="project-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>${project.title}</p>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>${project.title}</h3>
-                    <p class="project-description">${project.description}</p>
-                    <div class="project-links">
-                        ${project.links.demo ? `<a href="${project.links.demo}" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Demo</span>
-                        </a>` : ''}
-                        ${project.links.code ? `<a href="${project.links.code}" class="project-link">
-                            <i class="fab fa-github"></i>
-                            <span>Code</span>
-                        </a>` : ''}
-                    </div>
-                </div>
-            </div>
-        `).join('');
-    }
-}
-
-// News Manager
-class NewsManager {
-    constructor() {
-        this.newsItems = [
-            {
-                date: { day: "15", month: "Dec" },
-                title: "Accepted to USTC Graduate Program",
-                content: "Excited to announce my acceptance to the University of Science and Technology of China for Master's degree in Information and Communication Engineering!",
-                link: "#"
-            },
-            {
-                date: { day: "10", month: "Nov" },
-                title: "Paper Accepted at CVPR 2024",
-                content: "Our research on vision-language models has been accepted for presentation at the Conference on Computer Vision and Pattern Recognition 2024.",
-                link: "#"
-            },
-            {
-                date: { day: "25", month: "Oct" },
-                title: "New Research Collaboration",
-                content: "Starting a new collaboration with the AI Research Lab at USTC focusing on multimodal learning and reinforcement learning applications.",
-                link: "#"
-            }
-        ];
-        this.init();
-    }
-
-    init() {
-        this.renderNews();
-    }
-
-    renderNews() {
-        const container = document.querySelector('.news-grid');
-        if (!container) {
-            console.error('News container not found');
-            return;
-        }
-
-        console.log('Rendering news:', this.newsItems.length);
-        container.innerHTML = this.newsItems.map(news => `
-            <div class="news-item fade-in">
-                <div class="news-date">
-                    <span class="date-day">${news.date.day}</span>
-                    <span class="date-month">${news.date.month}</span>
-                </div>
-                <div class="news-content">
-                    <h3>${news.title}</h3>
-                    <p>${news.content}</p>
-                    <a href="${news.link}" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        `).join('');
-    }
-}
-
-// Gallery Manager
-class GalleryManager {
-    constructor() {
-        this.photos = [
-            { src: "photos/photo1.jpg", alt: "Life Photo 1" },
-            { src: "photos/photo2.jpg", alt: "Life Photo 2" },
-            { src: "photos/photo3.jpg", alt: "Life Photo 3" },
-            { src: "photos/photo4.jpg", alt: "Life Photo 4" },
-            { src: "photos/photo5.jpg", alt: "Life Photo 5" },
-            { src: "photos/photo6.jpg", alt: "Life Photo 6" }
-        ];
-        this.init();
-    }
-
-    init() {
-        this.renderGallery();
-    }
-
-    renderGallery() {
-        const container = document.querySelector('.gallery-grid');
-        if (!container) {
-            console.error('Gallery container not found');
-            return;
-        }
-
-        console.log('Rendering gallery:', this.photos.length);
-        container.innerHTML = this.photos.map((photo, index) => `
-            <div class="gallery-item fade-in">
-                <div class="gallery-placeholder">
-                    <i class="fas fa-camera"></i>
-                    <p>Photo ${index + 1}</p>
-                </div>
-            </div>
-        `).join('');
-    }
-}
-
-// Social Links Manager
-class SocialLinksManager {
-    constructor() {
-        this.socialLinks = [
-            { icon: "icon/邮箱.svg", name: "Email", url: "mailto:your.email@example.com" },
-            { icon: "icon/github-fill.svg", name: "GitHub", url: "https://github.com/yourusername" },
-            { icon: "icon/Google scholar.svg", name: "Google Scholar", url: "https://scholar.google.com/citations?user=yourid" },
-            { icon: "icon/dblp_.svg", name: "DBLP", url: "https://dblp.org/pid/yourid" },
-            { icon: "icon/openreview.png", name: "OpenReview", url: "https://openreview.net/profile?id=yourid" },
-            { icon: "icon/知乎.svg", name: "Zhihu", url: "https://www.zhihu.com/people/yourusername" },
-            { icon: "icon/小红书.svg", name: "Xiaohongshu", url: "https://www.xiaohongshu.com/user/profile/yourid" },
-            { icon: "icon/QQ.svg", name: "QQ", url: "tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=yourqqnumber" }
-        ];
-        this.init();
-    }
-
-    init() {
-        this.renderSocialLinks();
-    }
-
-    renderSocialLinks() {
-        const container = document.querySelector('.social-links');
-        if (!container) {
-            console.error('Social links container not found');
-            return;
-        }
-
-        console.log('Rendering social links:', this.socialLinks.length);
-        container.innerHTML = this.socialLinks.map(link => `
-            <a href="${link.url}" class="social-link fade-in" target="_blank" rel="noopener noreferrer">
-                <img src="${link.icon}" alt="${link.name}">
-                <span>${link.name}</span>
-            </a>
-        `).join('');
-    }
-}
-
-// Utility Functions
-class Utils {
-    static debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-
-    static throttle(func, limit) {
-        let inThrottle;
-        return function() {
-            const args = arguments;
-            const context = this;
-            if (!inThrottle) {
-                func.apply(context, args);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
-            }
-        };
-    }
-}
-
-// Navbar scroll effect
-class NavbarScrollEffect {
-    constructor() {
-        this.navbar = document.querySelector('.navbar');
-        this.init();
-    }
-
-    init() {
-        const handleScroll = Utils.throttle(() => {
-            if (window.scrollY > 50) {
-                this.navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                this.navbar.style.backdropFilter = 'blur(20px)';
-                this.navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                this.navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                this.navbar.style.backdropFilter = 'blur(10px)';
-                this.navbar.style.boxShadow = 'none';
-            }
-
-            // Dark theme navbar
-            if (document.documentElement.getAttribute('data-theme') === 'dark') {
-                if (window.scrollY > 50) {
-                    this.navbar.style.background = 'rgba(26, 26, 46, 0.98)';
-                } else {
-                    this.navbar.style.background = 'rgba(26, 26, 46, 0.95)';
-                }
-            }
-        }, 10);
-
-        window.addEventListener('scroll', handleScroll);
-    }
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Initializing homepage...');
+// Theme Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.querySelector('.theme-icon');
+    const body = document.body;
     
-    // Initialize core managers first
-    const themeManager = new ThemeManager();
-    const navigationManager = new NavigationManager();
-    const smoothScrollManager = new SmoothScrollManager();
-    const navbarScrollEffect = new NavbarScrollEffect();
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
     
-    // Initialize animation manager
-    const scrollAnimationManager = new ScrollAnimationManager();
-    
-    // Initialize content managers
-    const publicationManager = new PublicationManager();
-    const projectManager = new ProjectManager();
-    const newsManager = new NewsManager();
-    const galleryManager = new GalleryManager();
-    const socialLinksManager = new SocialLinksManager();
-    
-    // Re-observe elements after content is created
-    setTimeout(() => {
-        scrollAnimationManager.reobserveElements();
-        console.log('Re-observing elements for animation');
+    // Theme toggle event listener
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
-        // Debug: Check if elements exist
-        const pubItems = document.querySelectorAll('.publication-item');
-        const projItems = document.querySelectorAll('.project-item');
-        const newsItems = document.querySelectorAll('.news-item');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const socialItems = document.querySelectorAll('.social-link');
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
         
-        console.log('Dynamic elements found:');
-        console.log('- Publications:', pubItems.length);
-        console.log('- Projects:', projItems.length);
-        console.log('- News:', newsItems.length);
-        console.log('- Gallery:', galleryItems.length);
-        console.log('- Social links:', socialItems.length);
-    }, 100);
+        // Add a subtle animation to the toggle button
+        themeToggle.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            themeToggle.style.transform = 'scale(1)';
+        }, 150);
+    });
     
-    console.log('All managers initialized');
-
-    // Add loading animation
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
+    function updateThemeIcon(theme) {
+        themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
     
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// Handle window resize
-window.addEventListener('resize', Utils.debounce(() => {
-    // Close mobile menu on resize to desktop
-    if (window.innerWidth > 768) {
-        const navMenu = document.querySelector('.nav-menu');
-        const navToggle = document.querySelector('.nav-toggle');
-        if (navMenu && navToggle) {
-            navMenu.classList.remove('active');
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
             
-            // Reset hamburger menu
-            const bars = navToggle.querySelectorAll('.bar');
-            bars.forEach(bar => {
-                bar.style.transform = 'none';
-                bar.style.opacity = '1';
-            });
-        }
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Add active class to navigation links based on scroll position
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.section, .hero');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let currentSection = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            
+            if (window.pageYOffset >= sectionTop && 
+                window.pageYOffset < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + currentSection) {
+                link.classList.add('active');
+            }
+        });
+    });
+    
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all sections for animation
+    const animatedElements = document.querySelectorAll('.section, .research-card, .news-item, .pub-item, .project-item, .gallery-item');
+    animatedElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(element);
+    });
+    
+    // News item click functionality (placeholder for future blog implementation)
+    const newsItems = document.querySelectorAll('.news-item');
+    newsItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Add your blog/news detail page logic here
+            console.log('News item clicked:', this.querySelector('.news-title').textContent);
+        });
+    });
+    
+    // Publication and Project hover effects
+    const pubItems = document.querySelectorAll('.pub-item, .project-item');
+    pubItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // Social media link hover effects
+    const socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.05)';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // Gallery image modal functionality (optional enhancement)
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const img = this.querySelector('img');
+            if (img) {
+                // Create modal overlay
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10000;
+                    cursor: pointer;
+                `;
+                
+                const modalImg = document.createElement('img');
+                modalImg.src = img.src;
+                modalImg.style.cssText = `
+                    max-width: 90%;
+                    max-height: 90%;
+                    object-fit: contain;
+                    border-radius: 8px;
+                `;
+                
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+                
+                // Close modal on click
+                modal.addEventListener('click', function() {
+                    document.body.removeChild(modal);
+                });
+                
+                // Close modal on escape key
+                const handleKeyPress = function(e) {
+                    if (e.key === 'Escape') {
+                        document.body.removeChild(modal);
+                        document.removeEventListener('keydown', handleKeyPress);
+                    }
+                };
+                document.addEventListener('keydown', handleKeyPress);
+            }
+        });
+    });
+    
+    // Enhanced typing animation for hero title with cursor
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        const originalText = heroTitle.textContent;
+        heroTitle.innerHTML = '<span class="typing-text"></span><span class="typing-cursor">|</span>';
+        const typingText = heroTitle.querySelector('.typing-text');
+        const typingCursor = heroTitle.querySelector('.typing-cursor');
+        
+        let i = 0;
+        const typeWriter = function() {
+            if (i < originalText.length) {
+                typingText.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 80);
+            } else {
+                // Remove cursor after typing is complete
+                setTimeout(() => {
+                    typingCursor.style.opacity = '0';
+                }, 1000);
+            }
+        };
+        
+        // Start typing animation after a short delay
+        setTimeout(typeWriter, 1500);
     }
-}, 250));
+    
+    // Add cursor blinking animation
+    const style = document.createElement('style');
+    style.textContent += `
+        .typing-cursor {
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Add loading states for external links
+    const externalLinks = document.querySelectorAll('a[href^="http"]');
+    externalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Add loading indicator (optional)
+            const loadingSpan = document.createElement('span');
+            loadingSpan.textContent = ' ↗';
+            loadingSpan.style.opacity = '0.7';
+            this.appendChild(loadingSpan);
+        });
+    });
+    
+    // Enhanced parallax effects
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        
+        // Hero section parallax
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            const rate = scrolled * -0.3;
+            hero.style.transform = `translateY(${rate}px)`;
+        }
+        
+        // Floating shapes parallax
+        const shapes = document.querySelectorAll('.shape');
+        shapes.forEach((shape, index) => {
+            const speed = 0.5 + (index * 0.1);
+            const yPos = -(scrolled * speed);
+            shape.style.transform = `translateY(${yPos}px)`;
+        });
+        
+        // Profile image subtle rotation on scroll
+        const profileImg = document.querySelector('.profile-frame img');
+        if (profileImg && scrolled < window.innerHeight) {
+            const rotation = scrolled * 0.1;
+            profileImg.style.transform = `rotate(${rotation}deg)`;
+        }
+    });
+    
+    // Add hover effects to research tags
+    const researchTags = document.querySelectorAll('.research-tag');
+    researchTags.forEach(tag => {
+        tag.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.05)';
+            this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.3)';
+        });
+        
+        tag.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = 'none';
+        });
+    });
+    
+    // Add particle effect on mouse move
+    let mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Create subtle particle effect
+        if (Math.random() < 0.1) {
+            createParticle(mouseX, mouseY);
+        }
+    });
+    
+    function createParticle(x, y) {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            left: ${x}px;
+            top: ${y}px;
+            animation: particleFloat 2s ease-out forwards;
+        `;
+        
+        document.body.appendChild(particle);
+        
+        setTimeout(() => {
+            particle.remove();
+        }, 2000);
+    }
+    
+    // Add particle animation CSS
+    const particleStyle = document.createElement('style');
+    particleStyle.textContent = `
+        @keyframes particleFloat {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(0);
+            }
+        }
+    `;
+    document.head.appendChild(particleStyle);
+    
+    // Add ripple effect to buttons
+    const buttons = document.querySelectorAll('.theme-toggle, .pub-link, .project-link');
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            `;
+            
+            this.style.position = 'relative';
+            this.style.overflow = 'hidden';
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+    
+    // Add CSS for ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link.active::after {
+            width: 100% !important;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Performance optimization: Lazy load images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+    
+    // Add smooth reveal animation for sections
+    const revealElements = document.querySelectorAll('.section');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+    
+    console.log('Personal homepage initialized successfully! 🚀');
+});

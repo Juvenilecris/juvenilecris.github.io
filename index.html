@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ningning Wang - Personal Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -15,183 +16,262 @@
             <div class="nav-logo">
                 <h2>Ningning Wang</h2>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#news" class="nav-link">News</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="theme-toggle">
-                <button id="theme-toggle" class="theme-btn">
-                    <i class="fas fa-moon"></i>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#news" class="nav-link">News</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
+    <!-- Hero Section - Full Screen -->
+    <section id="about" class="hero">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Ningning Wang</h1>
-                    <p class="hero-subtitle">AI Researcher & Graduate Student</p>
-                    <p class="hero-description">
-                        Senior student at Dalian University of Technology, majoring in Artificial Intelligence. 
-                        Admitted to University of Science and Technology of China (USTC) for Master's degree in 
-                        Information and Communication Engineering. Passionate about VLM applications and Reinforcement Learning.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#about" class="btn btn-primary">Learn More</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                <div class="three-column-layout">
+                    <!-- Left Column: Profile Photo + Social Media -->
+                    <div class="left-column">
+                        <div class="profile-image">
+                            <div class="profile-frame">
+                                <img src="profile.jpg" alt="Ningning Wang" id="profile-img">
+                                <div class="profile-glow"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media Links -->
+                        <div class="social-links">
+                            <a href="https://github.com/juvenilecris" class="social-link" title="GitHub">
+                                <img src="icon/github-fill.svg" alt="GitHub">
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=36loOMgAAAAJ&hl=zh-CN" class="social-link" title="Google Scholar">
+                                <img src="icon/Google scholar.svg" alt="Google Scholar">
+                            </a>
+                            <a href="#" class="social-link" title="DBLP">
+                                <img src="icon/dblp_.svg" alt="DBLP">
+                            </a>
+                            <a href="https://openreview.net/profile?id=%7ENingning_Wang3" class="social-link" title="OpenReview">
+                                <img src="icon/openreview.png" alt="OpenReview">
+                            </a>
+                            <a href="https://www.zhihu.com/people/67-26-22-79" class="social-link" title="知乎">
+                                <img src="icon/知乎.svg" alt="知乎">
+                            </a>
+                            <a href="https://www.xiaohongshu.com/user/profile/65086bf60000000012004513" class="social-link" title="小红书">
+                                <img src="icon/小红书.svg" alt="小红书">
+                            </a>
+                            <a href="2659468809" class="social-link" title="QQ">
+                                <img src="icon/QQ.svg" alt="QQ">
+                            </a>
+                            <a href="nnwang@mail.dlut.edu.cn" class="social-link" title="Email">
+                                <img src="icon/邮箱.svg" alt="Email">
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-image">
-                        <img src="profile.jpg" alt="Ningning Wang" id="profile-img">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                            <p>Profile Photo</p>
+                    
+                    <!-- Center Column: Profile Information -->
+                    <div class="center-column">
+                        <div class="profile-info">
+                            <h1 class="hero-title">Ningning Wang (王宁宁)</h1>
+                            <h2 class="hero-subtitle">AI Researcher & Undergraduate Student</h2>
+                            <p class="hero-description">
+                                Senior student at Dalian University of Technology, majoring in Artificial Intelligence. 
+                                Admitted to University of Science and Technology of China (USTC) for Master's degree 
+                                in Information and Communication Engineering (081000). Passionate about VLM applications and Reinforcement Learning.
+                            </p>
+                            
+                            <!-- Call to Action Buttons -->
+                            <div class="hero-buttons">
+                                <a href="#publications" class="btn btn-primary">Learn More</a>
+                                <a href="#contact" class="btn btn-outline">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Research Tags & Academic Journey -->
+                    <div class="right-column">
+                        <!-- Research Interests Tags -->
+                        <div class="research-section">
+                            <h3 class="section-subtitle">Research Interests</h3>
+                            <div class="research-tags">
+                                <span class="research-tag">Vision-Language Models</span>
+                                <span class="research-tag">Reinforcement Learning</span>
+                                <span class="research-tag">Reasoning Models</span>
+                                <span class="research-tag">waiting for add...</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Education Timeline -->
+                        <div class="education-section">
+                            <h3 class="section-subtitle">Academic Journey</h3>
+                            <div class="education-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>University of Science and Technology of China</h4>
+                                        <p class="degree">Master's in Information and Communication Engineering</p>
+                                        <p class="period">2026 - 20xx(expected) </p>
+                                        <span class="status">Admitted</span>
+                                        <span class="status">Future</span>
+                                        <span class="status">Master</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>Dalian University of Technology</h4>
+                                        <p class="degree">Bachelor of Engineering in Artificial Intelligence</p>
+                                        <p class="period">2022 - 2026(expected)</p>
+                                        <span class="status">Senior Student</span>
+                                        <span class="status">Bachelor</span>
+                                        <span class="status">Gap Year</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h4>University of Science and Technology of China (USTC)</h4>
-                            <span class="education-period">2025 - Present (Expected)</span>
-                        </div>
-                        <p class="education-degree">Master of Engineering in Information and Communication Engineering</p>
-                        <p class="education-status">Admitted, Gap Year</p>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h4>Dalian University of Technology (DUT)</h4>
-                            <span class="education-period">2021 - 2025</span>
-                        </div>
-                        <p class="education-degree">Bachelor of Engineering in Artificial Intelligence</p>
-                        <p class="education-status">Senior Student (Expected Graduation: 2025)</p>
-                    </div>
-                </div>
-                <div class="about-skills">
-                    <h3>Research Interests</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fas fa-robot"></i>
-                            <span>Vision-Language Models</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-brain"></i>
-                            <span>Reinforcement Learning</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-eye"></i>
-                            <span>Computer Vision</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-language"></i>
-                            <span>Natural Language Processing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <h2 class="section-title">Research</h2>
-            <div class="research-content">
-                <div class="research-item">
-                    <h3>Vision-Language Models (VLM) Applications</h3>
-                    <p>
-                        Exploring innovative applications of vision-language models in real-world scenarios. 
-                        Focus on multimodal understanding, image captioning, and visual question answering systems.
-                    </p>
-                </div>
-                <div class="research-item">
-                    <h3>Reinforcement Learning</h3>
-                    <p>
-                        Investigating advanced reinforcement learning algorithms and their applications in 
-                        autonomous systems and decision-making processes.
-                    </p>
-                </div>
-                <div class="research-item">
-                    <h3>Multimodal AI Systems</h3>
-                    <p>
-                        Developing integrated systems that combine visual and textual understanding for 
-                        enhanced AI capabilities in various domains.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="publications-grid">
-                <!-- Publications will be populated dynamically by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <!-- Projects will be populated dynamically by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news" class="news">
+    <!-- News/Blog Section -->
+    <section id="news" class="section">
         <div class="container">
             <h2 class="section-title">News & Blog</h2>
-            <div class="news-grid">
-                <!-- News items will be populated dynamically by JavaScript -->
+            <div class="news-container">
+                <div class="news-item">
+                    <span class="news-type news-tag">News</span>
+                    <h3 class="news-title">Admitted to USTC Master's Program</h3>
+                    <p class="news-date">December 2025</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-type blog-tag">Blog</span>
+                    <h3 class="news-title">Understanding Vision-Language Models: A Beginner's Guide</h3>
+                    <p class="news-date">November 2024</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-type news-tag">News</span>
+                    <h3 class="news-title">Graduating from Dalian University of Technology</h3>
+                    <p class="news-date">June 2025</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-type blog-tag">Blog</span>
+                    <h3 class="news-title">Reinforcement Learning in Practice: Challenges and Solutions</h3>
+                    <p class="news-date">October 2024</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
+    <!-- Publications & Projects Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Publications & Projects</h2>
+            
+            <!-- Publications -->
+            <div class="subsection">
+                <h3 class="subsection-title">Publications</h3>
+                <div class="pub-project-grid">
+                    <div class="pub-item">
+                        <div class="pub-thumbnail">
+                            <img src="https://via.placeholder.com/300x200/2D5A27/FFFFFF?text=Paper+Title" alt="Publication">
+                        </div>
+                        <div class="pub-content">
+                            <h4 class="pub-title">Advanced Vision-Language Models for Multimodal Understanding</h4>
+                            <p class="pub-authors">Ningning Wang, et al.</p>
+                            <p class="pub-venue">ICML 2024</p>
+                            <p class="pub-abstract">This paper presents a novel approach to vision-language understanding...</p>
+                            <div class="pub-links">
+                                <a href="#" class="pub-link">
+                                    <img src="icon/Arxiv.svg" alt="ArXiv" class="link-icon">
+                                    ArXiv
+                                </a>
+                                <a href="#" class="pub-link">
+                                    <img src="icon/Google scholar.svg" alt="Google Scholar" class="link-icon">
+                                    BibTeX
+                                </a>
+                                <a href="#" class="pub-link">
+                                    <img src="icon/github-fill.svg" alt="Code" class="link-icon">
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="subsection">
+                <h3 class="subsection-title">Projects</h3>
+                <div class="pub-project-grid">
+                    <div class="project-item">
+                        <div class="project-thumbnail">
+                            <img src="https://via.placeholder.com/300x200/1E40AF/FFFFFF?text=Project+Demo" alt="Project">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Multimodal AI Assistant</h4>
+                            <p class="project-description">An intelligent assistant that can understand both images and text, providing contextual responses and analysis.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">Transformers</span>
+                                <span class="tech-tag">OpenCV</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <img src="icon/github-fill.svg" alt="GitHub" class="link-icon">
+                                    GitHub
+                                </a>
+                                <a href="#" class="project-link">
+                                    <span class="link-icon">🌐</span>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="section">
         <div class="container">
             <h2 class="section-title">Life Gallery</h2>
             <div class="gallery-grid">
-                <!-- Gallery photos will be populated dynamically by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact & Social Media</h2>
-            <div class="social-links">
-                <!-- Social media links will be populated dynamically by JavaScript -->
+                <div class="gallery-item">
+                    <img src="photos/photo1.jpg" alt="Life Photo 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/photo2.jpg" alt="Life Photo 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/1E40AF/FFFFFF?text=Photo+3" alt="Life Photo 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/2D5A27/FFFFFF?text=Photo+4" alt="Life Photo 4">
+                </div>
             </div>
         </div>
     </section>
