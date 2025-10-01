@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ningning Wang - Personal Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Ningning Wang</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#news" class="nav-link">News</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Ningning Wang</h1>
+                    <p class="hero-subtitle">AI Researcher & Graduate Student</p>
+                    <p class="hero-description">
+                        Senior student at Dalian University of Technology, majoring in Artificial Intelligence. 
+                        Admitted to University of Science and Technology of China (USTC) for Master's degree in 
+                        Information and Communication Engineering. Passionate about VLM applications and Reinforcement Learning.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn btn-primary">Learn More</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image">
+                        <img src="profile.jpg" alt="Ningning Wang" id="profile-img">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                            <p>Profile Photo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <div class="education-header">
+                            <h4>University of Science and Technology of China (USTC)</h4>
+                            <span class="education-period">2025 - Present (Expected)</span>
+                        </div>
+                        <p class="education-degree">Master of Engineering in Information and Communication Engineering</p>
+                        <p class="education-status">Admitted, Gap Year</p>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-header">
+                            <h4>Dalian University of Technology (DUT)</h4>
+                            <span class="education-period">2021 - 2025</span>
+                        </div>
+                        <p class="education-degree">Bachelor of Engineering in Artificial Intelligence</p>
+                        <p class="education-status">Senior Student (Expected Graduation: 2025)</p>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <h3>Research Interests</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Vision-Language Models</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Reinforcement Learning</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-language"></i>
+                            <span>Natural Language Processing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <h2 class="section-title">Research</h2>
+            <div class="research-content">
+                <div class="research-item">
+                    <h3>Vision-Language Models (VLM) Applications</h3>
+                    <p>
+                        Exploring innovative applications of vision-language models in real-world scenarios. 
+                        Focus on multimodal understanding, image captioning, and visual question answering systems.
+                    </p>
+                </div>
+                <div class="research-item">
+                    <h3>Reinforcement Learning</h3>
+                    <p>
+                        Investigating advanced reinforcement learning algorithms and their applications in 
+                        autonomous systems and decision-making processes.
+                    </p>
+                </div>
+                <div class="research-item">
+                    <h3>Multimodal AI Systems</h3>
+                    <p>
+                        Developing integrated systems that combine visual and textual understanding for 
+                        enhanced AI capabilities in various domains.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="publications-grid">
+                <!-- Placeholder for publications - will be populated dynamically -->
+                <div class="publication-item">
+                    <div class="publication-header">
+                        <h3>Sample Publication Title</h3>
+                        <div class="publication-venue">
+                            <span class="venue-name">Conference/Journal Name</span>
+                            <span class="venue-year">2024</span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>Ningning Wang</strong>, Co-author Name, Another Author
+                    </div>
+                    <div class="publication-abstract">
+                        <p>Brief abstract of the publication will be displayed here. This is a placeholder text to show the structure of the publication display.</p>
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" class="pub-link">
+                            <img src="icon/Arxiv.svg" alt="ArXiv">
+                            <span>ArXiv</span>
+                        </a>
+                        <a href="#" class="pub-link">
+                            <i class="fas fa-code"></i>
+                            <span>Code</span>
+                        </a>
+                        <a href="#" class="pub-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>PDF</span>
+                        </a>
+                        <a href="#" class="pub-link">
+                            <i class="fas fa-quote-right"></i>
+                            <span>BibTeX</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Placeholder for projects -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Project Image</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sample Project Title</h3>
+                        <p class="project-description">
+                            Description of the project, its goals, and achievements. This placeholder shows the structure for project display.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Demo</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <h2 class="section-title">News & Blog</h2>
+            <div class="news-grid">
+                <!-- Placeholder for news items -->
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">Dec</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Sample News Title</h3>
+                        <p>Brief description of the news item or blog post content...</p>
+                        <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Life Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Placeholder for photos -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <p>Photo 1</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <p>Photo 2</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <p>Photo 3</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <p>Photo 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Social Media</h2>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <img src="icon/邮箱.svg" alt="Email">
+                    <span>Email</span>
+                </a>
+                <a href="#" class="social-link">
+                    <img src="icon/github-fill.svg" alt="GitHub">
+                    <span>GitHub</span>
+                </a>
+                <a href="#" class="social-link">
+                    <img src="icon/Google scholar.svg" alt="Google Scholar">
+                    <span>Google Scholar</span>
+                </a>
+                <a href="#" class="social-link">
+                    <img src="icon/dblp_.svg" alt="DBLP">
+                    <span>DBLP</span>
+                </a>
+                <a href="#" class="social-link">
+                    <img src="icon/openreview.png" alt="OpenReview">
+                    <span>OpenReview</span>
+                </a>
+                <a href="#" class="social-link">
+                    <img src="icon/知乎.svg" alt="Zhihu">
+                    <span>Zhihu</span>
+                </a>
+                <a href="#" class="social-link">
+                    <img src="icon/小红书.svg" alt="Xiaohongshu">
+                    <span>Xiaohongshu</span>
+                </a>
+                <a href="#" class="social-link">
+                    <img src="icon/QQ.svg" alt="QQ">
+                    <span>QQ</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ningning Wang. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
