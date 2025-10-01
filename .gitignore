@@ -1,11 +1,3 @@
-# Personal files that shouldn't be shared
-profile.jpg
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.webp
-
 # Except for placeholder images
 !profile-placeholder.svg
 !project-placeholder.svg
