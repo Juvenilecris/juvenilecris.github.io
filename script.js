@@ -184,8 +184,12 @@ class PublicationManager {
 
     renderPublications() {
         const container = document.querySelector('.publications-grid');
-        if (!container) return;
+        if (!container) {
+            console.error('Publications container not found');
+            return;
+        }
 
+        console.log('Rendering publications:', this.publications.length);
         container.innerHTML = this.publications.map(pub => `
             <div class="publication-item fade-in">
                 <div class="publication-header">
@@ -265,8 +269,12 @@ class ProjectManager {
 
     renderProjects() {
         const container = document.querySelector('.projects-grid');
-        if (!container) return;
+        if (!container) {
+            console.error('Projects container not found');
+            return;
+        }
 
+        console.log('Rendering projects:', this.projects.length);
         container.innerHTML = this.projects.map(project => `
             <div class="project-item fade-in">
                 <div class="project-image">
@@ -326,8 +334,12 @@ class NewsManager {
 
     renderNews() {
         const container = document.querySelector('.news-grid');
-        if (!container) return;
+        if (!container) {
+            console.error('News container not found');
+            return;
+        }
 
+        console.log('Rendering news:', this.newsItems.length);
         container.innerHTML = this.newsItems.map(news => `
             <div class="news-item fade-in">
                 <div class="news-date">
@@ -364,8 +376,12 @@ class GalleryManager {
 
     renderGallery() {
         const container = document.querySelector('.gallery-grid');
-        if (!container) return;
+        if (!container) {
+            console.error('Gallery container not found');
+            return;
+        }
 
+        console.log('Rendering gallery:', this.photos.length);
         container.innerHTML = this.photos.map((photo, index) => `
             <div class="gallery-item fade-in">
                 <div class="gallery-placeholder">
@@ -399,8 +415,12 @@ class SocialLinksManager {
 
     renderSocialLinks() {
         const container = document.querySelector('.social-links');
-        if (!container) return;
+        if (!container) {
+            console.error('Social links container not found');
+            return;
+        }
 
+        console.log('Rendering social links:', this.socialLinks.length);
         container.innerHTML = this.socialLinks.map(link => `
             <a href="${link.url}" class="social-link fade-in" target="_blank" rel="noopener noreferrer">
                 <img src="${link.icon}" alt="${link.name}">
@@ -473,6 +493,8 @@ class NavbarScrollEffect {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('Initializing homepage...');
+    
     // Initialize all managers
     new ThemeManager();
     new NavigationManager();
@@ -484,6 +506,8 @@ document.addEventListener('DOMContentLoaded', () => {
     new GalleryManager();
     new SocialLinksManager();
     new NavbarScrollEffect();
+    
+    console.log('All managers initialized');
 
     // Add loading animation
     document.body.style.opacity = '0';
