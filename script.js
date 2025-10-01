@@ -137,10 +137,20 @@ class ScrollAnimationManager {
             .social-link
         `);
 
+        console.log('Found elements to animate:', elementsToAnimate.length);
         elementsToAnimate.forEach(el => {
             el.classList.add('fade-in');
             this.observer.observe(el);
         });
+    }
+
+    // Method to re-observe elements after dynamic content is added
+    reobserveElements() {
+        // Clear existing observations
+        this.observer.disconnect();
+        
+        // Re-observe all elements
+        this.observeElements();
     }
 }
 
@@ -190,6 +200,7 @@ class PublicationManager {
         }
 
         console.log('Rendering publications:', this.publications.length);
+        console.log('Container found:', container);
         container.innerHTML = this.publications.map(pub => `
             <div class="publication-item fade-in">
                 <div class="publication-header">
@@ -495,17 +506,41 @@ class NavbarScrollEffect {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Initializing homepage...');
     
-    // Initialize all managers
-    new ThemeManager();
-    new NavigationManager();
-    new SmoothScrollManager();
-    new ScrollAnimationManager();
-    new PublicationManager();
-    new ProjectManager();
-    new NewsManager();
-    new GalleryManager();
-    new SocialLinksManager();
-    new NavbarScrollEffect();
+    // Initialize core managers first
+    const themeManager = new ThemeManager();
+    const navigationManager = new NavigationManager();
+    const smoothScrollManager = new SmoothScrollManager();
+    const navbarScrollEffect = new NavbarScrollEffect();
+    
+    // Initialize animation manager
+    const scrollAnimationManager = new ScrollAnimationManager();
+    
+    // Initialize content managers
+    const publicationManager = new PublicationManager();
+    const projectManager = new ProjectManager();
+    const newsManager = new NewsManager();
+    const galleryManager = new GalleryManager();
+    const socialLinksManager = new SocialLinksManager();
+    
+    // Re-observe elements after content is created
+    setTimeout(() => {
+        scrollAnimationManager.reobserveElements();
+        console.log('Re-observing elements for animation');
+        
+        // Debug: Check if elements exist
+        const pubItems = document.querySelectorAll('.publication-item');
+        const projItems = document.querySelectorAll('.project-item');
+        const newsItems = document.querySelectorAll('.news-item');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const socialItems = document.querySelectorAll('.social-link');
+        
+        console.log('Dynamic elements found:');
+        console.log('- Publications:', pubItems.length);
+        console.log('- Projects:', projItems.length);
+        console.log('- News:', newsItems.length);
+        console.log('- Gallery:', galleryItems.length);
+        console.log('- Social links:', socialItems.length);
+    }, 100);
     
     console.log('All managers initialized');
 

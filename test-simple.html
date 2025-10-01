@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Test</title>
+    <style>
+        .test-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .test-item {
+            background: #f0f0f0;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Test</h1>
+    
+    <div class="test-container">
+        <h2>Publications Test</h2>
+        <div class="publications-grid">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM loaded, testing...');
+            
+            const container = document.querySelector('.publications-grid');
+            console.log('Container found:', container);
+            
+            if (container) {
+                container.innerHTML = `
+                    <div class="test-item">Publication 1</div>
+                    <div class="test-item">Publication 2</div>
+                `;
+                console.log('Content added to container');
+            } else {
+                console.error('Container not found!');
+            }
+        });
+    </script>
+</body>
+</html>
